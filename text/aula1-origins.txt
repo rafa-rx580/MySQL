@@ -1,0 +1,13 @@
+	Por volta da década de 1950, com o avanço da computação e a necessidade de substituir técnicas de armazenamento de dados como em papel, surge ideias de aproveitar o poder computacional para facilitar este processo.
+Analogia (vida real): Armários guardam pastas, pastas guardam papéis.
+Analogia (MySQL): Arquivos guardam tabelas, tabelas guardam registros.
+	No começo, as técnicas de digitalizar os documentos eram bem arcaicas. Ficou-se conhecido como acesso sequencial, aquele onde os dados eram armazenados de forma sequencial em fitas magnéticas ou cartões perfurados, onde para achar um dado específico era necessário percorrer desde o primeiro registro até a o desejado.
+	Depois, com o surgimento dos disquetes e dos discos rígidos, os registros passaram a receber um index, um identificador, facilitando e muito o acesso aos dados. Essa técnica ficou conhecida como acesso direto, e por mais que facilitava, ainda era muito simples.
+	Isso até a década de 60, onde em um encontro envolvendo o departamento de defesa do EUA, o governo e empresas, o CODASYL, foram discutidas novas tecnologias. Foi aí que surgiu o COBOL.
+	Essa linguagem se preocupava com a estrutura de dados. Com tudo isso, surgiu a estrutura chamada Banco de Dados.
+	O Banco de Dados é composto:
+		Base de Dados: Dados que estão armazenados.
+		Sistema Gerenciador: Gerencia os dados.
+		Linguagem de exploração: Linguagem que acessa o dado.
+		Programas Adicionais.
+	O modelo usado pelo MySQL (no momento do curso) é o modelo relacional, onde os dados também tem relações entre eles.
