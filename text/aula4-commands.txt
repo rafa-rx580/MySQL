@@ -1,0 +1,15 @@
+create database nome; - cria um banco de dados;
+
+default character set utf8 - seta os caracteres para utf8;
+
+default collate utf8_general_ci - seta o collate para utf8; 
+
+drop database nome; - deleta um banco de dados;
+
+create table nome (
+	dado tipoPrimitivo(valor)
+) default charset = utf8; - cria uma tabela e seta os caracteres para utf8;
+
+Campos Chave Primária: São campos onde 2 pessoas não podem ter o mesmo valor. Exemplo: CPF, Matrícula de uma Universidade, academia, etc;
+
+Ao final do create table, para definir a chave primária use PRIMARY KEY (chave);

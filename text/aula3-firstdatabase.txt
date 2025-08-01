@@ -1,0 +1,20 @@
+Tipos primitivos de tabelas{
+
+	Numéricos{
+		Inteiros (TinyInt, SmallInt, Int, MediumInt, BigInt),
+		Reais(Decimal, Float, Double, Real),
+		Lógicos(Bit, Boolean)
+	},
+	
+	Data/Tempo (Date, DateTime, Time, TimeStamp, Time, Year),
+	
+	Literal{
+		Caractere(Char, VarChar),
+		Texto(TinyText, Text, MediumText, LongText),
+		Binário(TinyBlob, Blob, MediumBlob, LongBlob),
+		Coleção(Enum,Set)
+		
+	},
+	
+	Espacial (Geometry, Point, Polygon, Multipolygon),
+}
