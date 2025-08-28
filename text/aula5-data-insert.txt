@@ -1,0 +1,6 @@
+DDL - Data Definition Language (Comandos de definição)
+	exemplo de comando DDL - create table tabela() / create database;
+
+DML - Data Manipulation Language (Comando de manipulação de dados)
+	ex: insert into tabela;
+	
