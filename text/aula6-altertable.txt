@@ -1,0 +1,42 @@
+Adicionar uma nova coluna em uma tabela que já existe. 
+	(desc - mostra as colunas da tabela)
+	ex: alter table pessoas
+		add column profissao varchar(10);
+	
+Para remover é simples:
+	alter table pessoas
+	drop column profissao;
+	
+Para adicionar uma coluna em uma posição específica, basta:
+	alter table pessoas
+	add column profissao varchar(10) after nome;;
+
+	Basicamente vai colocar a coluna profissão depois da coluna nome.
+	
+	Para colocar como primeira coluna:
+	add column profissao int FIRST;
+	
+	Para alterar o tipo primitivo ou alterar as constantes de uma coluna (ex profissao varchar(10)) use:
+	alter table pessoas
+	modify column profissao varchar(20) not null;
+	
+	Para renomear a coluna:
+	change column profissao prof varchar(20) not null default '';
+	
+	Para renomear a tabela inteira:
+	
+	alter table pessoas
+	rename to gafanhotos;
+	
+Pequenas dicas:
+	UNIQUE: Faz não repetir (NAO CONFUNDIR COM PRIMARY KEY).
+	UNSIGNED (Para números, não deixa ser negativo).
+	
+Apagar tabela inteira:
+	drop table x;
+	
+Apagar database inteira:
+	drop database x;
+	
+	
+Alter table e drop table são comandos DDL;
