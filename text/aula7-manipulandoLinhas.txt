@@ -1,0 +1,34 @@
+Modificando linhas 
+
+(Suponha: colunas: idcurso(linhas: 1, 4, 7), nome(linhas: HTML4, PGP, Jarva), carga(linhas: 40, 40, 10), ano(linhas: 2014, 2010, 2000)
+Queremos consertar os campos incorretos (toda a coluna nome, a carga de 10 na linha jarva, e o ano errado 2010 e 2000):
+
+update cursos
+SET nome = 'HTML5'
+where = idcurso = '1'
+limit 1;
+
+(se eu quiser afetar apenas uma linha, use embaixo: "limit 1)
+
+Removendo uma linha
+
+delete from cursos
+where idcurso = '8';
+
+Remover TODAS as linhas de uma tabela:
+
+truncate cursos; (MUITO CUIDADO)
+
+LISTA DDL ATUALIZADA:
+
+create database
+create table
+alter table
+drop table
+
+LISTA DML ATUALIZADA:
+
+insert into
+update
+delete
+truncate
