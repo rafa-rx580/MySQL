@@ -1,0 +1,11 @@
+Dentro do MySQL Workbench: 
+	1- Server (opções acima, do lado de tools, database, file, edit, etc)
+	2- Data Export
+	3- Seleciona as databases e tabelas.
+	4- Seleciona o Dump (exportação) Data Only (apenas dados) Structure Only (apenas estrutura) e ambos.
+	5- Selecionar se vai exportar como uma pasta de projeto ou arquivo único.
+	6- Marca a caixa de Include Create Schema (tira a necessidade de criar um banco de dados pra poder importar, pois ele cria automaticamente)
+	7- Clique em Start Export e pronto!
+	
+	O dump ele basicamente faz tudo aquilo que o criador da base de dados fez, todos os comandos até chegar no ponto que estava.
+	
