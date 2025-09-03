@@ -1,0 +1,80 @@
+LIKE e %
+
+select * from cursos
+where nome like 'P%';
+
+Mostra todos os nomes que começam com P.
+
+O % substitui um ou mais caracteres, logo, no exemplo acima, ele vai mostrar tudo que começa com P. 
+
+É possível também: %P, %P%.
+
+É similar ao * em PHP.
+
+Similar ao %, você pode usar _
+
+A diferença é que o _ exige que tenha algo no lugar mencionado, não pode ser vazio.
+
+ex: 
+
+PHP, Photoshop, PHP4, PHP5
+
+
+
+select * from cursos
+where nome like 'PH%P%';
+
+PHP, Photoshop, PHP4, PHP5
+
+
+
+select * from cursos
+where nome like 'PHP%P_';
+
+PHP4, PHP5
+
+
+Distinguindo
+
+select dinstinct nacionalidade from cursos;
+order by nacionalidade;
+
+Não mostra dados repetidos, logo, nesse exemplo, vai mostrar apenas uma ocorrência de cada valor, e por causa do order by vai organizar por ordem alfabética de acordo com a coluna nacionalidade.
+
+
+Agregação
+
+select count(*) from cursos;
+
+count = 30 
+
+Dá o número, a conta do total de dados que atendam aos requisitos.
+
+ex:
+
+select count(*) from cursos where carga > 40;
+
+count = 6
+
+ou seja, apenas 6 cursos da tabela possuíam carga horaria maior que 40 horas.
+
+
+select max(carga) from cursos. (qual é a maior carga entre os cursos?)
+
+max = 60
+
+
+select max(totaulas) from cursos where ano = '2016'; (Qual foi o total máximo de aulas nos cursos de 2016?)
+
+MIN -> oposto do max.
+
+
+
+select SUM(totaulas) from cursos where ano = '2016'; (qual é a soma do total de aulas dos cursos de 2016?)
+
+sum = 216
+
+
+AVG -> média
+
+select avg(totaulas) from cursos where ano = '2016'; (qual a média do total de aulas nos cursos de 2016?)
