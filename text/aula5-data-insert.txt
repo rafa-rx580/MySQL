@@ -4,3 +4,8 @@ DDL - Data Definition Language (Comandos de definição)
 DML - Data Manipulation Language (Comando de manipulação de dados)
 	ex: insert into tabela;
 	
+	Estrutura básica insert into:
+	
+	insert into (nome da tabela sem parênteses)
+	(coluna 1, c2, c3, c4, c5...)
+	values (dado1, d2, d3, d4, d5...);

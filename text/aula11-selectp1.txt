@@ -1,0 +1,30 @@
+Select * from tabela; (mostra tudo da tabela)
+
+select * from tabela
+order by (nome da coluna); (mostra tudo da tabela ordenado pela coluna. Para colocar na ordem decrescente basta acrescentar a palavra "desc" sem aspas após o nome da coluna)
+
+para mostrar apenas algumas colunas:
+
+select coluna1, coluna2, coluna3 from tabela;
+
+filtrar linhas:
+
+select * from cursos
+where coluna = 'valordacoluna';
+
+Assim, vai mostrar todas as linhas aonde na coluna COLUNA possuir o valor VALORDACOLUNA.
+
+Dá pra definir uma ordem de ordenação, exemplo, se dentro da ordem ano tiver cursos fora da ordem alfabética, basta colocar order by ano, nome;
+
+Dá pra definir cada um desses orders como decrescente ou crescente, basta adicionar o desc depois do nome da coluna e antes da vírgula;
+
+ex: oder by, ano desc, nome;
+
+pode usar também outros sinais como !=, <> (diferente), >, <, between value1 and value2, e pode usar mais de um também.
+
+select * from cursos 
+where carga > 35 and totaulas < 30.
+
+Pode usar operadores lógicos também.
+
+AND, OR
