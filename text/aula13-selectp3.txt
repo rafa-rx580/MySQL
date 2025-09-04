@@ -1,0 +1,52 @@
+Dinstinguir: Considera apenas valores únicos (descarta os repetidos).
+
+Agrupar: Criar um grupo para cada valor igual.
+
+select carga from cursos
+group by carga;
+
+Você pode usar uma função de agregação com o group:
+
+select carga, COUNT(nome) from cursos
+group by carga;
+
+no resultado visual, apareceria por exemplo:
+
+carga		count()
+40		6
+20		1
+10		1
+30		1
+5		1
+
+então você consegue ver quantos tem de cada, coisa que não era possível se usasse o distinct para esse caso.
+
+Também é possível usar "having" para especificar ainda mais.
+
+Caso eu queira agrupar os cursos e contar quantos cursos tem por ano, mas eu só quero acima de um valor específico por exemplo:
+
+select ano, count(*) from cursos
+group by ano
+having count(ano) >=5
+order by count(*) desc;
+
+output:
+
+ano		count(*)
+2017		8
+2018		5
+
+ou seja, ele só mostrou os anos onde, tiveram 5 ou mais cursos.
+
+o having é como se fosse o where pro group by
+O WHERE SÓ TRABALHA COM A COLUNA ESPECIFICADA PELO GROUP BY, se tentar usar outra vai dar erro.
+
+Dá pra usar um select dentro de outro select:
+Se eu quiser mostrar os cursos acima de 2015 agrupados com a carga de aula maior do que a média dos cursos eu uso:
+
+select carga, count(*) from cursos
+where ano > 2015
+group by carga
+having carga > (select avg(carga) from cursos);
+
+isso vai mostrar os cursos que foram depois de 2015 com a carga acima da média de cargas da tabela.
