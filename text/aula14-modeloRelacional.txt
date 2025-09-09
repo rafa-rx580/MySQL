@@ -1,0 +1,58 @@
+	Surgiu para resolver problemas dos modelos anteriores na época. Aqui, os dados tem mais do que simples ligações. Eles tem relações.
+	Estabelece relações entre as entidades. (entidades são os containers, as tabelas, ex: cursos e gafanhotos).
+	Apresentou o conceito e o uso das chaves. (Chave primária).
+	
+	Quadrado 1: gafanhoto
+	
+	Losango: assiste
+	
+	Quadrado 2: curso
+	
+	Os quadrados são entidades, e os losangos são chamados de "relacionamentos".
+	
+	Cardinalidade: n.
+		Um gafanhoto assiste N cursos
+		Um curso é assistido por N gafanhotos
+		
+		GAFANHOTO N <-> ASSISTE N <-> CURSO
+		(MUITOS-PARA-MUITOS)
+		
+		MARIDO 1 <-> CASA COM 1 <-> ESPOSA
+		(UM-PRA-UM)
+		
+		FUNCIONARIO 1 <-> CUIDA N <-> DEPENDENTES
+		(UM-PARA-MUITOS)
+		
+		Chave estrangeira:  É a chave primária de outra tabela, que não é a que está selecionada, que foi trazida de outro lugar.
+		
+		Basicamente, criar relacionamentos de tabelas é trocar chaves primárias entre tabelas. Se não tiver chave primária, não existe relação.
+		
+		REGRAS:
+		
+		1 pra 1: Primeiro: É possível juntar as duas tabelas? Se sim, junte. Se não:
+			Defina a entidade dominante, pegue a chave primária da outra entidade e passe para a dominante como chave estrangeira SENDO: Tem que ser do mesmo tipo. Se a primary key de um é inteira, o outro também tem que ser, por exemplo.
+			
+		1 pra muitos: Pega a chave primária do lado 1 e joga para o lado muitos como chave estrangeira. (todas as chaves para todos os tipos tem que ser do mesmo tipo).
+		
+		Muitos para muitos: O relacionamento (O losango) vira uma entidade.
+		ex:
+			quadrado 1: CLIENTE
+			cpf(pk), nome, endereco, telefone.
+			
+			losango: COMPRA
+			id-compra(pk), data, formaPagto.
+			
+			quadrado 2: PRODUTO
+			codProd(pk), nome, fabricante, preco.
+			
+			Cria-se mini relacionamentos entre as entidades e o relacionamento, sendo o N ficando perto do relacionamento e na outra extremidade fica 1. Ex:
+			
+			CLIENTE 1 <-> rel <-> n COMPRA n <-> rel <-> 1 PRODUTO
+			E aí é só fazer o mesmo de um pra muitos, a chave primária de 1 vai pro muitos.
+			
+			ou seja, compra ficaria com duas chaves estrangeiras, codProd e cpf.
+			O segredo é desmembrar um relacionamentos MUITO para MUITOS para UM para MUITOS.
+			
+			
+			
+			
