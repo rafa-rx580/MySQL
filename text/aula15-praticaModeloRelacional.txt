@@ -1,0 +1,18 @@
+Uma transação / tarefa: ACID
+
+Atomicidade: Ou algo acontece ou nada acontece;
+Consistência: Tudo precisa continuar funcionando após uma transação;
+Isolamento: Não podem interferir uma na outra;
+Durabilidade: Precisa durar o tempo que for necessário. 
+
+Como selecionar uma tabela que já foi relacionada com a chave estrangeira?
+
+select tabela.coluna, tabela.coluna2, tabela2.coluna, tabela2.coluna2
+from tabela join tabela2
+on tabela2.chaveprimaria = tabela.chaveestrangeira;
+
+Isso é um inner join, que mostra apenas os dados que tem relação.
+
+se usar o Outer join, também vai considerar os campos que não se relacionam. (usa-se left para considerar a tabela à esquerda do join ou right para considerar a tabela à direita.
+
+SEMPRE QUE USAR O JOIN, use o on também para relacionar.
