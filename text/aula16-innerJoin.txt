@@ -1,0 +1,10 @@
+Relações muitos para muitos na prática:
+
+Juntar os dois joins depois de criar a chave estrangeira na tabela intermediária como na nota passada.
+
+select pessoas.nome, cursos.nome from pessoas
+join assiste
+on pessoas.id = assiste.idpessoa
+join cursos
+on cursos.idcurso = assiste.idcurso
+order by pessoas.nome;
